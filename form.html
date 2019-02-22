@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz about Crocuses</title>
+</head>
+
+<body>
+    <h1>Quiz about Crocuses</h1>
+    <p><a href="index.html"> Homepage </a></p>
+    <form id="quiz" method="POST" action="https://formspree.io/andriy.shevtsiv@gmail.com">
+        <fieldset>
+            <label>User Name:<input type="text" placeholder="User Name" name="user-name" autofocus></label>
+            <br>
+            <br>
+            <label for="email-input">User Email:</label>
+            <input type="email" id="email-input" placeholder="Email" name="user-email">
+            <br>
+            <br>
+            <label for="disabled-field-input">Disabled field:</label>
+            <input type="text" id="disabled-field-input" placeholder="Text" name="disabled-field" disabled>
+            <br>
+            <br>
+            <label for="readonly-field-input">Read only field:</label>
+            <input type="text" id="readonly-field-input" placeholder="Text" name="readonly-field" readonly>
+            <br>
+            <br>
+            <label for="url">Web-site:</label>
+            <input type="url" id="url" name="url">
+            <br>
+            <br>
+            <label for="search">Search*:</label>
+            <input type="search" id="search" name="search" required>
+            <br>
+            <br>
+        </fieldset>
+        <label>Gender:</label>
+        <label> <input type="radio" name="gender" value="male">Male</label>
+        <label> <input type="radio" name="gender" value="female">Female</label>
+        <label> <input type="radio" name="gender" value="other">Other</label>
+        <br>
+        <br>
+        <label for="tel">User Phone:</label>
+        <input type="tel" id="tel" name="tel" pattern="^[0-9-+s()]*$" title="Allowed symbols: numbers, minus, plus, parentheses">
+        <br>
+        <br>
+        <label for="zipcode">Zip Code:</label>
+        <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" title="Five-digit zip code">
+        <br>
+        <br>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd">
+        <br>
+        <br>
+        <label for="story">User Story:</label>
+        <textarea id="story" name="story" rows="5" cols="33"></textarea>
+        <br>
+        <br>
+        <select id="simple" name="simple">
+        <option>Banana</option>
+        <option>Cherry</option>
+        <option>Lemon</option>
+        </select>
+        <br>
+        <br>
+        <select id="groups" name="groups">
+  <optgroup label="fruits">
+    <option>Banana</option>
+    <option selected>Cherry</option>
+    <option>Lemon</option>
+  </optgroup>
+  <optgroup label="vegetables">
+    <option>Carrot</option>
+    <option>Eggplant</option>
+    <option>Potato</option>
+  </optgroup>
+</select>
+        <br>
+        <br>
+        <select multiple id="multi" name="multi">
+  <option>Banana</option>
+  <option>Cherry</option>
+  <option>Lemon</option>
+</select>
+        <br>
+        <br>
+        <label for="myFruit">What's your favorite fruit?</label>
+        <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+        <datalist id="mySuggestion">
+  <option>Apple</option>
+  <option>Banana</option>
+  <option>Blackberry</option>
+  <option>Blueberry</option>
+  <option>Lemon</option>
+  <option>Lychee</option>
+  <option>Peach</option>
+  <option>Pear</option>
+</datalist>
+        <br>
+        <br>
+        <label for="myFruit-fallbacks">What is your favorite fruit? (With fallback)</label>
+        <input type="text" id="myFruit-fallbacks" name="fruit" list="fruitList">
+        <datalist id="fruitList">
+  <label for="suggestion">or pick a fruit</label>
+  <select id="suggestion" name="altFruit">
+    <option>Apple</option>
+    <option>Banana</option>
+    <option>Blackberry</option>
+    <option>Blueberry</option>
+    <option>Lemon</option>
+    <option>Lychee</option>
+    <option>Peach</option>
+    <option>Pear</option>
+  </select>
+</datalist>
+        <br>
+        <br>
+        <label>What is your vehicle?</label>
+        <label><input type="checkbox" name="vehicle1" value="Bike"> I have a bike</label>
+        <label><input type="checkbox" name="vehicle2" value="Car"> I have a car</label>
+        <label><input type="checkbox" name="vehicle3" value="Boat"> I have a boat</label>
+        <br>
+        <br>
+        <label for="age">User Age:</label>
+        <input type="number" name="age" id="age" min="0" max="125" step="1">
+        <br>
+        <br>
+        <label for="beans">How many beans can you eat?</label>
+        <input type="range" name="beans" id="beans" min="0" max="500" step="10">
+        <span class="beancount"></span>
+        <br>
+        <br>
+        <label for="myDate">When are you available this summer?</label>
+        <input type="date" name="myDate" min="2019-06-01" max="2019-08-31" id="myDate">
+        <br>
+        <br>
+        <label for="color">What is your favorite color?</label>
+        <input type="color" name="color" id="color">
+        <br>
+        <br>
+        <label for="file">User Photo</label>
+        <input type="file" name="file" id="file" accept="image/*" multiple>
+        <br>
+        <br>
+        <input type="image" alt="Click me!" title="Click me!" src="img/crocuses.jpg" width="80" height="30" />
+        <br>
+        <br>
+        <progress max="100" value="50">Quiz Progress</progress>
+        <br>
+        <br>
+        <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+        <br>
+        <br>
+        <input type="reset" value="Reset">
+        <br>
+        <br>
+        <input type="submit" value="SEND">
+        <p><strong>Note:</strong> fields marked with an * are required.
+            <p>
+    </form>
+</body>
+</html>
